@@ -1,0 +1,23 @@
+{% extends "padre.html" %}
+
+{% load static %}
+
+{% block titulo %}
+<h1 class = "mb-5"> Buscar curso </h1>
+{% endblock %}
+
+{% block contenido %}
+
+<h3>{{ mensaje }}</h3>
+
+<h2>Ingrese la comision que quiere buscar:</h2>
+
+<form action="{% url 'buscar' %}" method="GET">
+
+    <input type="number" name="comision" id="comision" placaholder="Inserte la comision que busca" >
+
+    <input type="submit" value = "Buscar">
+
+</form>
+
+{% endblock %}

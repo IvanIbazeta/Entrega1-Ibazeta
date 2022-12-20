@@ -1,0 +1,25 @@
+{% extends "padre.html" %}
+
+{% load static %}
+
+{% block titulo %}
+<h1 class = "mb-5"> Estudiantes </h1>
+{% endblock %}
+
+{% block contenido %}
+
+<h3>{{ mensaje }}</h3>
+
+<form action="{% url 'estudiantes' %}" method="POST"> {% csrf_token %}
+
+    <table>
+
+        {{ form.as_table }}
+
+    </table>
+
+    <input type="submit" value = "Guardar">
+
+</form>
+
+{% endblock %}
